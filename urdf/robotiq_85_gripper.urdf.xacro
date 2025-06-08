@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 
-
 <robot name="robotiq_85_gripper" xmlns:xacro="http://ros.org/wiki/xacro">
     <xacro:include filename="$(find robotiq_gripper)/urdf/robotiq_85_gripper.transmission.xacro" />
     <xacro:property name="pi" value="3.14159"/>
@@ -91,13 +90,13 @@
             </inertial>
         </link>
 
-        <joint name="${prefix}robotiq_85_left_finger_joint" type="continuous">
+        <joint name="${prefix}robotiq_85_left_finger_joint" type="fixed">
             <parent link="${prefix}robotiq_85_left_knuckle_link"/>
             <child link="${prefix}robotiq_85_left_finger_link"/>
             <origin xyz="-0.00408552455 -0.03148604435 0.0" rpy="0 0 0" />
         </joint>
 
-        <joint name="${prefix}robotiq_85_right_finger_joint" type="continuous">
+        <joint name="${prefix}robotiq_85_right_finger_joint" type="fixed">
             <parent link="${prefix}robotiq_85_right_knuckle_link"/>
             <child link="${prefix}robotiq_85_right_finger_link"/>
             <origin xyz="-0.00408552455 -0.03148604435 0.0" rpy="0 0 0" />
